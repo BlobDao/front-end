@@ -1,0 +1,14 @@
+.blober-wrapper {
+    background-color: transparent;
+    height: auto;
+    width: auto;
+    margin: 0;
+
+    display: flex;
+    z-index: 2;
+
+    .canvas {
+        height: 100%;
+        width: 100%,
+    }
+}

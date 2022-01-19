@@ -17,7 +17,7 @@ import Countdown from "react-countdown";
 function Presale() {
     const dispatch = useDispatch();
     const { provider, address, connect, chainID, checkWrongNetwork } = useWeb3Context();
-    const MAX_MATIC = 500;
+    const MAX_MATIC = 700;
 
     const isAppLoading = useSelector<IReduxState, boolean>(state => state.app.loading);
 
@@ -272,7 +272,7 @@ function Presale() {
 
                                         <div className="data-row">
                                             <p className="data-row-name">Your Deposited Balance</p>
-                                            <p className="data-row-value">{isAppLoading ? <Skeleton width="80px" /> : <>{depositedMatic}/500 FTM</>}</p>
+                                            <p className="data-row-value">{isAppLoading ? <Skeleton width="80px" /> : <>{depositedMatic}/700 FTM</>}</p>
                                         </div>
                                     </div>
                                 </div>

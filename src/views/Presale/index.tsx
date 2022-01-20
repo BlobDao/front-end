@@ -169,11 +169,11 @@ function Presale() {
                                             <div onClick={changeView(0)} className={classnames("stake-card-action-stage-btn", { active: !view })}>
                                                 <p>Deposit</p>
                                             </div>
-                                            {presaleEndDate.getTime() >= Date.now() && (
+                                            {/* {presaleEndDate.getTime() >= Date.now() && (
                                                 <div onClick={changeView(1)} className={classnames("stake-card-action-stage-btn", { active: view })}>
                                                     <p>Redeem</p>
                                                 </div>
-                                            )}
+                                            )} */}
                                         </div>
 
                                         <div className="stake-card-action-row">
@@ -194,7 +194,16 @@ function Presale() {
                                                     }
                                                 />,
                                                 <div className="stake-card-tab-panel">
-                                                    {address && hasAllowance("matic") ? (
+                                                    <div
+                                                            className="stake-card-tab-panel-btn"
+                                                            onClick={() => {
+                                                                if (isPendingTxn(pendingTransactions, "staking")) return;
+                                                                onChangeStake("stake");
+                                                            }}
+                                                        >
+                                                            <p>{txnButtonText(pendingTransactions, "staking", "Deposit FTM")}</p>
+                                                    </div>
+                                                    {/* {address && hasAllowance("matic") ? (
                                                         <div
                                                             className="stake-card-tab-panel-btn"
                                                             onClick={() => {
@@ -214,11 +223,11 @@ function Presale() {
                                                         >
                                                             <p>{txnButtonText(pendingTransactions, "approve_staking", "Approve")}</p>
                                                         </div>
-                                                    )}
+                                                    )} */}
                                                 </div>,
                                             ]}
 
-                                            {view === 1 && [
+                                            {/* {view === 1 && [
                                                 <div className="stake-card-tab-panel">
                                                     {address && hasAllowance("pBlob") ? (
                                                         <div
@@ -253,7 +262,7 @@ function Presale() {
                                                 //         <p>{txnButtonText(pendingTransactions, "unstaking", "Claim BLOB")}</p>
                                                 //     </div>
                                                 // </div>
-                                            ]}
+                                            ]} */}
                                         </div>
 
                                         <div className="stake-card-action-help-text">

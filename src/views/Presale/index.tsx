@@ -278,7 +278,10 @@ function Presale() {
                                             <p className="data-row-name">Your Claimable Balance</p>
                                             <p className="data-row-value">{isAppLoading ? <Skeleton width="80px" /> : <>{claimablepBlob} pBLOB</>}</p>
                                         </div>
-
+                                        <div className="data-row">
+                                            <p className="data-row-name">Your Pending BLOB Balance</p>
+                                            <p className="data-row-value">{isAppLoading ? <Skeleton width="80px" /> : <>{claimablepBlob * 139} BLOB</>}</p>
+                                        </div>
                                         <div className="data-row">
                                             <p className="data-row-name">Your Deposited Balance</p>
                                             <p className="data-row-value">{isAppLoading ? <Skeleton width="80px" /> : <>{depositedMatic}/700 FTM</>}</p>
